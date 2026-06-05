@@ -1,1 +1,1 @@
-// La' Vie Dental Health Care Scripts
+console.log("La' Vie Dental Health Care Website Loaded");
