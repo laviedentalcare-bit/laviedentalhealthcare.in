@@ -9,13 +9,14 @@ html{
 }
 
 body{
-    font-family: Arial, sans-serif;
-    background:#F8F8F5;
-    color:#222;
+    font-family:Arial, sans-serif;
     overflow-x:hidden;
+    background:#01463D;
 }
 
-/* HEADER */
+/* ==========================
+HEADER
+========================== */
 
 .navbar{
     position:fixed;
@@ -27,11 +28,11 @@ body{
     justify-content:space-between;
     align-items:center;
 
-    padding:18px 70px;
+    padding:20px 70px;
 
-    background:#ffffff;
+    background:rgba(1,70,61,0.92);
 
-    box-shadow:0 2px 20px rgba(0,0,0,.05);
+    backdrop-filter:blur(10px);
 
     z-index:1000;
 }
@@ -48,16 +49,15 @@ body{
 }
 
 .brand-text h2{
-    color:#01463D;
-    font-size:1.5rem;
-    font-weight:600;
+    color:white;
+    font-size:1.8rem;
 }
 
 .brand-text span{
-    color:#666;
-    font-size:.85rem;
-    text-transform:uppercase;
+    color:#D4AF37;
     letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:.8rem;
 }
 
 nav{
@@ -67,10 +67,10 @@ nav{
 }
 
 nav a{
+    color:white;
     text-decoration:none;
-    color:#01463D;
-    font-weight:500;
     transition:.3s;
+    font-weight:500;
 }
 
 nav a:hover{
@@ -80,11 +80,15 @@ nav a:hover{
 .appointment-btn{
     background:#D4AF37;
     color:#01463D !important;
-    padding:12px 22px;
-    border-radius:30px;
+
+    padding:14px 24px;
+
+    border-radius:40px;
 }
 
-/* HERO */
+/* ==========================
+HERO
+========================== */
 
 .hero{
     min-height:100vh;
@@ -94,23 +98,56 @@ nav a:hover{
 
     align-items:center;
 
-    padding:140px 80px 80px;
+    padding:150px 80px 80px;
+
     gap:60px;
+
+    background:#01463D;
+
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    background:rgba(212,175,55,0.07);
+
+    border-radius:50%;
+
+    top:-150px;
+    right:-150px;
+
+    filter:blur(80px);
+}
+
+.hero-text{
+    z-index:2;
 }
 
 .hero-text h1{
-    font-size:4rem;
-    line-height:1.1;
-    color:#01463D;
+    font-size:5rem;
+    line-height:1.05;
+    color:white;
+
     margin-bottom:25px;
+
+    animation:fadeUp 1s ease;
 }
 
 .hero-text p{
-    font-size:1.2rem;
+    font-size:1.3rem;
+    color:#E5E5E5;
+
     line-height:1.8;
-    color:#555;
-    max-width:550px;
-    margin-bottom:35px;
+
+    margin-bottom:40px;
+
+    animation:fadeUp 1.2s ease;
 }
 
 .hero-buttons{
@@ -121,8 +158,11 @@ nav a:hover{
 
 .btn{
     text-decoration:none;
-    padding:14px 28px;
+
+    padding:15px 30px;
+
     border-radius:40px;
+
     transition:.3s;
 }
 
@@ -132,32 +172,40 @@ nav a:hover{
 }
 
 .outline{
-    border:2px solid #01463D;
-    color:#01463D;
+    border:2px solid rgba(255,255,255,.8);
+    color:white;
 }
 
 .btn:hover{
-    transform:translateY(-2px);
+    transform:translateY(-4px);
 }
 
 .hero-image{
     display:flex;
     justify-content:center;
     align-items:center;
+    z-index:2;
 }
 
 .hero-image img{
+
     width:100%;
-    max-width:650px;
+    max-width:700px;
 
     border-radius:25px;
 
-    box-shadow:0 20px 60px rgba(0,0,0,.10);
+    box-shadow:0 30px 70px rgba(0,0,0,.35);
+
+    animation:slideRight 1.3s ease;
 }
 
-/* PLACEHOLDER SECTIONS */
+/* ==========================
+PLACEHOLDER SECTIONS
+========================== */
 
-section{
+section:not(.hero){
+    background:#F8F8F5;
+    color:#222;
     padding:120px 80px;
 }
 
@@ -167,23 +215,41 @@ section h2{
     font-size:2.5rem;
 }
 
-/* MOBILE */
+/* ==========================
+ANIMATION
+========================== */
+
+@keyframes slideRight{
+
+    from{
+        opacity:0;
+        transform:translateX(100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+MOBILE
+========================== */
 
 @media(max-width:992px){
-
-    .hero{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .hero-text p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
 
     .navbar{
         padding:15px 20px;
@@ -194,14 +260,23 @@ section h2{
     nav{
         flex-wrap:wrap;
         justify-content:center;
-        gap:15px;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding-top:220px;
     }
 
     .hero-text h1{
-        font-size:2.8rem;
+        font-size:3rem;
     }
 
-    section{
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    section:not(.hero){
         padding:80px 25px;
     }
 }
