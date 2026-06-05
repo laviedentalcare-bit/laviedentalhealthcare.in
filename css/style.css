@@ -1,10 +1,109 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Arial,sans-serif;
-    background:#F8F8F5;
+font-family:Arial,sans-serif;
+background:#F8F8F5;
+color:#222;
+}
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+background:rgba(1,70,61,0.9);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo img{
+height:60px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(
+rgba(1,70,61,.75),
+rgba(1,70,61,.75)
+),
+url('../images/interior.jpeg');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+color:white;
+}
+
+.hero-logo{
+width:180px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
+
+.gold{
+background:#D4AF37;
+color:black;
+}
+
+.outline{
+border:2px solid #D4AF37;
+color:white;
+}
+
+section{
+padding:120px 80px;
+}
+
+h2{
+text-align:center;
+font-size:2.5rem;
+color:#01463D;
 }
