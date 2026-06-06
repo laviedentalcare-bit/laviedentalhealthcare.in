@@ -872,3 +872,128 @@ justify-content:center;
 }
 
 }
+/* =========================
+CONTACT PAGE V2
+========================= */
+
+.page-hero{
+
+padding-top:160px;
+padding-bottom:80px;
+
+text-align:center;
+
+background:
+linear-gradient(
+135deg,
+#012F29,
+#01463D,
+#005B4F
+);
+
+color:white;
+}
+
+.page-hero h1{
+
+font-size:4rem;
+
+margin-bottom:20px;
+}
+
+.page-hero p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+}
+
+.contact-luxury{
+
+padding:120px 8%;
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:60px;
+
+background:#F8F8F5;
+}
+
+.contact-info,
+.appointment-form{
+
+background:white;
+
+padding:50px;
+
+border-radius:30px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.08);
+}
+
+.contact-info h2,
+.appointment-form h2{
+
+color:#012F29;
+
+margin-bottom:25px;
+}
+
+.contact-detail{
+
+margin-top:25px;
+margin-bottom:25px;
+}
+
+.contact-detail h3{
+
+color:#D4AF37;
+
+margin-bottom:10px;
+}
+
+.appointment-form form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+}
+
+.appointment-form input,
+.appointment-form textarea{
+
+padding:16px;
+
+border:1px solid #ddd;
+
+border-radius:12px;
+
+font-family:inherit;
+}
+
+.appointment-form textarea{
+
+resize:none;
+}
+
+@media(max-width:992px){
+
+.contact-luxury{
+
+grid-template-columns:1fr;
+}
+
+.page-hero h1{
+
+font-size:2.8rem;
+}
+
+}
