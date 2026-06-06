@@ -365,15 +365,16 @@ DOCTOR IMAGES
 
 width:100%;
 
-/* IMPORTANT:
-This shows the full photo
-and prevents head cropping */
+height:380px;
 
-height:auto;
+object-fit:cover;
+
+object-position:center 15%;
 
 display:block;
 
 transition:.6s ease;
+}
 }
 
 .doctor-card:hover img{
@@ -383,7 +384,8 @@ transform:scale(1.03);
 
 .doctor-content{
 
-padding:40px;
+padding:25px;
+
 }
 
 .doctor-content h3{
