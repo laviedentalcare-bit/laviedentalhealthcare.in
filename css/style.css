@@ -4,6 +4,10 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:"Times New Roman",serif;
 background:#F8F8F5;
@@ -30,12 +34,14 @@ padding:0 6%;
 background:#012F29;
 
 z-index:1000;
+
+transition:.3s ease;
 }
 
 .brand{
 display:flex;
 align-items:center;
-gap:14px;
+gap:15px;
 }
 
 .brand img{
@@ -49,19 +55,29 @@ flex-direction:column;
 }
 
 .lavie{
+
 font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;
+
 font-style:italic;
+
 font-size:3rem;
+
 line-height:.9;
-color:white;
+
+color:#FFFFFF;
 }
 
 .clinic-name{
+
 font-family:"Times New Roman",serif;
+
 font-size:.75rem;
+
 letter-spacing:4px;
+
+color:#FFFFFF;
+
 text-transform:uppercase;
-color:white;
 }
 
 .nav-links{
@@ -70,10 +86,15 @@ gap:35px;
 }
 
 .nav-links a{
-text-decoration:none;
-color:white;
-font-size:1rem;
+
 position:relative;
+
+text-decoration:none;
+
+color:white;
+
+font-size:1rem;
+
 transition:.3s;
 }
 
@@ -82,14 +103,21 @@ color:#D4AF37;
 }
 
 .nav-links a::after{
+
 content:"";
+
 position:absolute;
+
 left:0;
 bottom:-8px;
+
 width:0;
+
 height:1px;
+
 background:#D4AF37;
-transition:.4s;
+
+transition:.3s;
 }
 
 .nav-links a:hover::after{
@@ -100,13 +128,13 @@ width:100%;
 
 .hero{
 
-padding-top:130px;
-
 min-height:100vh;
 
+padding-top:95px;
+
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 
 padding-left:8%;
 padding-right:8%;
@@ -122,9 +150,9 @@ width:45%;
 
 font-size:5rem;
 
-color:#012F29;
-
 line-height:1.1;
+
+color:#012F29;
 
 margin-bottom:25px;
 }
@@ -141,49 +169,94 @@ margin-bottom:40px;
 }
 
 .hero-buttons{
+
 display:flex;
+
+align-items:center;
+
 gap:15px;
-flex-wrap:wrap;
 }
 
 .btn{
 
-padding:15px 30px;
-
-border-radius:50px;
-
 text-decoration:none;
 
-transition:.3s;
+transition:.3s ease;
 }
 
 .primary-btn{
 
+padding:16px 32px;
+
 background:#012F29;
 
 color:white;
+
+border-radius:50px;
 }
 
 .primary-btn:hover{
+
 background:#01463D;
+
+transform:translateY(-3px);
 }
 
 .secondary-btn{
 
+padding:16px 32px;
+
 border:1px solid #D4AF37;
 
 color:#012F29;
+
+border-radius:50px;
 }
 
 .secondary-btn:hover{
 
 background:#D4AF37;
 
-color:#012F29;
+transform:translateY(-3px);
 }
 
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+
+width:58px;
+height:58px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+border:1px solid #D4AF37;
+
+background:white;
+
+font-size:1.5rem;
+
+color:#25D366;
+}
+
+.whatsapp-btn:hover{
+
+background:#25D366;
+
+color:white;
+
+transform:translateY(-3px);
+}
+
+/* HERO IMAGE */
+
 .hero-image{
+
 width:50%;
+
 display:flex;
 justify-content:center;
 }
@@ -195,7 +268,7 @@ width:90%;
 border-radius:30px;
 
 box-shadow:
-0 20px 60px rgba(0,0,0,.15);
+0 25px 70px rgba(0,0,0,.15);
 
 animation:floatImage 6s ease-in-out infinite;
 }
@@ -213,10 +286,9 @@ transform:translateY(-12px);
 100%{
 transform:translateY(0);
 }
-
 }
 
-/* WHATSAPP */
+/* FLOATING WHATSAPP */
 
 .floating-whatsapp{
 
@@ -225,19 +297,32 @@ position:fixed;
 right:25px;
 bottom:25px;
 
+width:60px;
+height:60px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
 background:#25D366;
 
 color:white;
 
-padding:15px 20px;
+border-radius:50%;
 
-border-radius:50px;
+font-size:1.7rem;
 
 text-decoration:none;
 
-font-weight:bold;
-
 z-index:9999;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.25);
+}
+
+.floating-whatsapp:hover{
+
+transform:translateY(-4px);
 }
 
 /* MOBILE */
@@ -249,8 +334,12 @@ display:none;
 }
 
 .hero{
+
 flex-direction:column;
+
 text-align:center;
+
+padding-top:140px;
 }
 
 .hero-content{
@@ -258,12 +347,13 @@ width:100%;
 }
 
 .hero-image{
+
 width:100%;
+
 margin-top:40px;
 }
 
 .hero-content h1{
 font-size:3rem;
 }
-
 }
