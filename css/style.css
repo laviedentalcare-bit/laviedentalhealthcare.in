@@ -657,3 +657,67 @@ grid-row:auto;
 }
 
 }
+/* =========================
+CONTACT
+========================= */
+
+.contact-section{
+
+padding:120px 8%;
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:30px;
+
+background:
+linear-gradient(
+135deg,
+#012F29,
+#01463D
+);
+}
+
+.contact-card{
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+padding:40px;
+
+border-radius:25px;
+
+color:white;
+
+text-align:center;
+
+border:1px solid
+rgba(255,255,255,.10);
+}
+
+.contact-card h2{
+
+margin-bottom:20px;
+
+color:#D4AF37;
+}
+
+.contact-card p{
+
+line-height:1.8;
+
+margin-bottom:25px;
+}
+
+@media(max-width:992px){
+
+.contact-section{
+
+grid-template-columns:1fr;
+}
+
+}
