@@ -4,20 +4,13 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
-background:#012F29;
 font-family:"Times New Roman",serif;
+background:#F8F8F5;
 overflow-x:hidden;
-color:#F8F8F5;
 }
 
-/* ==========================
-   NAVBAR
-========================== */
+/* HEADER */
 
 .navbar{
 
@@ -26,7 +19,7 @@ top:0;
 left:0;
 
 width:100%;
-height:100px;
+height:95px;
 
 display:flex;
 justify-content:space-between;
@@ -34,30 +27,19 @@ align-items:center;
 
 padding:0 6%;
 
+background:#012F29;
+
 z-index:1000;
-
-background:rgba(1,47,41,.92);
-
-backdrop-filter:blur(15px);
-
-box-shadow:
-0 10px 40px rgba(0,0,0,.15);
-
-transition:.4s ease;
 }
-
-/* ==========================
-   BRAND
-========================== */
 
 .brand{
 display:flex;
 align-items:center;
-gap:20px;
+gap:14px;
 }
 
 .brand img{
-height:75px;
+height:60px;
 width:auto;
 }
 
@@ -67,11 +49,11 @@ flex-direction:column;
 }
 
 .lavie{
-font-family:"Monotype Corsiva",cursive;
-font-size:3.3rem;
-font-weight:normal;
-line-height:1;
-color:#D4AF37;
+font-family:"Palatino Linotype","Book Antiqua",Palatino,serif;
+font-style:italic;
+font-size:3rem;
+line-height:.9;
+color:white;
 }
 
 .clinic-name{
@@ -79,13 +61,8 @@ font-family:"Times New Roman",serif;
 font-size:.75rem;
 letter-spacing:4px;
 text-transform:uppercase;
-color:#F8F8F5;
-margin-top:3px;
+color:white;
 }
-
-/* ==========================
-   NAVIGATION
-========================== */
 
 .nav-links{
 display:flex;
@@ -93,38 +70,25 @@ gap:35px;
 }
 
 .nav-links a{
-
-position:relative;
-
 text-decoration:none;
-
-color:#F8F8F5;
-
+color:white;
 font-size:1rem;
-
-font-weight:500;
-
+position:relative;
 transition:.3s;
 }
 
 .nav-links a:hover{
-color:#E4C27A;
+color:#D4AF37;
 }
 
 .nav-links a::after{
-
 content:"";
-
 position:absolute;
-
 left:0;
 bottom:-8px;
-
 width:0;
-height:1.5px;
-
+height:1px;
 background:#D4AF37;
-
 transition:.4s;
 }
 
@@ -132,15 +96,13 @@ transition:.4s;
 width:100%;
 }
 
-/* ==========================
-   HERO
-========================== */
+/* HERO */
 
 .hero{
 
 padding-top:130px;
 
-min-height:90vh;
+min-height:100vh;
 
 display:flex;
 justify-content:space-between;
@@ -149,197 +111,99 @@ align-items:center;
 padding-left:8%;
 padding-right:8%;
 
-background:
-linear-gradient(
-135deg,
-#012F29 0%,
-#013B34 40%,
-#01463D 100%
-);
+background:#F8F8F5;
 }
-
-/* ==========================
-   LEFT CONTENT
-========================== */
 
 .hero-content{
 width:45%;
-color:#F8F8F5;
-}
-
-.tagline{
-
-display:inline-block;
-
-font-size:.9rem;
-
-letter-spacing:5px;
-
-color:#E4C27A;
-
-margin-bottom:25px;
 }
 
 .hero-content h1{
 
 font-size:5rem;
 
-line-height:1.15;
+color:#012F29;
 
-font-weight:600;
+line-height:1.1;
 
-margin-bottom:30px;
-
-animation:fadeUp 1s ease;
+margin-bottom:25px;
 }
 
 .hero-content p{
 
-font-size:1.25rem;
+font-size:1.3rem;
 
 line-height:1.8;
 
+color:#555;
+
 margin-bottom:40px;
-
-animation:fadeUp 1.4s ease;
 }
-
-/* ==========================
-   BUTTONS
-========================== */
 
 .hero-buttons{
 display:flex;
-gap:20px;
+gap:15px;
 flex-wrap:wrap;
 }
 
 .btn{
 
-padding:15px 34px;
+padding:15px 30px;
 
 border-radius:50px;
 
 text-decoration:none;
 
-font-size:1rem;
-
-transition:.4s;
+transition:.3s;
 }
 
-.gold-btn{
+.primary-btn{
 
-background:#D4AF37;
+background:#012F29;
 
-color:#012F29;
-
-font-weight:600;
-
-box-shadow:
-0 10px 30px rgba(212,175,55,.35);
+color:white;
 }
 
-.gold-btn:hover{
-
-transform:translateY(-5px);
-
-background:#E4C27A;
+.primary-btn:hover{
+background:#01463D;
 }
 
-.btn:not(.gold-btn){
+.secondary-btn{
 
 border:1px solid #D4AF37;
 
-color:#F8F8F5;
+color:#012F29;
 }
 
-.btn:not(.gold-btn):hover{
+.secondary-btn:hover{
 
 background:#D4AF37;
 
 color:#012F29;
-
-transform:translateY(-5px);
 }
-
-/* ==========================
-   RIGHT IMAGE
-========================== */
 
 .hero-image{
-
 width:50%;
-
 display:flex;
 justify-content:center;
-align-items:center;
-
-position:relative;
-}
-
-.hero-image::before{
-
-content:"";
-
-position:absolute;
-
-width:500px;
-height:500px;
-
-background:
-radial-gradient(
-rgba(212,175,55,.18),
-transparent 70%
-);
-
-top:50%;
-left:50%;
-
-transform:
-translate(-50%,-50%);
-
-z-index:0;
 }
 
 .hero-image img{
 
-width:92%;
+width:90%;
 
-border-radius:35px;
-
-border:1px solid rgba(212,175,55,.25);
+border-radius:30px;
 
 box-shadow:
-0 25px 70px rgba(0,0,0,.35);
-
-position:relative;
-
-z-index:1;
+0 20px 60px rgba(0,0,0,.15);
 
 animation:floatImage 6s ease-in-out infinite;
-}
-
-/* ==========================
-   ANIMATIONS
-========================== */
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 @keyframes floatImage{
 
 0%{
-transform:translateY(0px);
+transform:translateY(0);
 }
 
 50%{
@@ -347,84 +211,12 @@ transform:translateY(-12px);
 }
 
 100%{
-transform:translateY(0px);
-}
-}
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media(max-width:1200px){
-
-.hero-content h1{
-font-size:4.2rem;
-}
+transform:translateY(0);
 }
 
-@media(max-width:992px){
-
-.nav-links{
-display:none;
 }
 
-.hero{
-
-flex-direction:column;
-
-text-align:center;
-
-padding-top:140px;
-}
-
-.hero-content{
-width:100%;
-}
-
-.hero-image{
-width:100%;
-margin-top:50px;
-}
-
-.hero-content h1{
-font-size:3rem;
-}
-
-.hero-content p{
-font-size:1.1rem;
-}
-
-.hero-buttons{
-justify-content:center;
-}
-
-.lavie{
-font-size:2.4rem;
-}
-
-.clinic-name{
-font-size:.65rem;
-letter-spacing:3px;
-}
-}
-
-@media(max-width:576px){
-
-.hero-content h1{
-font-size:2.5rem;
-}
-
-.brand img{
-height:60px;
-}
-
-.lavie{
-font-size:2rem;
-}
-}
-/* ==========================
-   FLOATING WHATSAPP
-========================== */
+/* WHATSAPP */
 
 .floating-whatsapp{
 
@@ -437,7 +229,7 @@ background:#25D366;
 
 color:white;
 
-padding:15px 22px;
+padding:15px 20px;
 
 border-radius:50px;
 
@@ -446,15 +238,32 @@ text-decoration:none;
 font-weight:bold;
 
 z-index:9999;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.25);
-
-transition:.3s;
 }
 
-.floating-whatsapp:hover{
+/* MOBILE */
 
-transform:translateY(-5px);
+@media(max-width:992px){
+
+.nav-links{
+display:none;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-content{
+width:100%;
+}
+
+.hero-image{
+width:100%;
+margin-top:40px;
+}
+
+.hero-content h1{
+font-size:3rem;
+}
 
 }
