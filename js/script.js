@@ -68,3 +68,30 @@ window.addEventListener("load", () => {
     .style.opacity = "1";
 
 });
+
+const whySlides =
+document.querySelectorAll(".why-slide");
+
+if(whySlides.length > 0){
+
+let whyIndex = 0;
+
+setInterval(() => {
+
+whySlides[whyIndex]
+.classList.remove("active");
+
+whyIndex++;
+
+if(whyIndex >= whySlides.length){
+
+whyIndex = 0;
+
+}
+
+whySlides[whyIndex]
+.classList.add("active");
+
+}, 4000);
+
+}
